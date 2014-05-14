@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @paciente.nome %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @paciente.email %>
+</p>
+
+<p>
+  <strong>Telefone:</strong>
+  <%= @paciente.telefone %>
+</p>
+
+<p>
+  <strong>Data nascimento:</strong>
+  <%= @paciente.data_nascimento %>
+</p>
+
+<p>
+  <strong>Sexo:</strong>
+  <%= @paciente.sexo %>
+</p>
+
+<p>
+  <strong>Estado civil:</strong>
+  <%= @paciente.estado_civil %>
+</p>
+
+<p>
+  <strong>Profissao:</strong>
+  <%= @paciente.profissao %>
+</p>
+
+<p>
+  <strong>Trabalha:</strong>
+  <%= @paciente.trabalha %>
+</p>
+
+<p>
+  <strong>Tipo sanguineo:</strong>
+  <%= @paciente.tipo_sanguineo %>
+</p>
+
+<p>
+  <strong>Fumante:</strong>
+  <%= @paciente.fumante %>
+</p>
+
+<p>
+  <strong>Etilista:</strong>
+  <%= @paciente.etilista %>
+</p>
+
+<p>
+  <strong>Cirurgias:</strong>
+  <%= @paciente.cirurgias %>
+</p>
+
+<p>
+  <strong>Doencas paternas:</strong>
+  <%= @paciente.doencas_paternas %>
+</p>
+
+<p>
+  <strong>Doencas maternas:</strong>
+  <%= @paciente.doencas_maternas %>
+</p>
+
+<p>
+  <strong>Historico peso:</strong>
+  <%= @paciente.historico_peso %>
+</p>
+
+<%= link_to 'Edit', edit_paciente_path(@paciente) %> |
+<%= link_to 'Back', pacientes_path %>

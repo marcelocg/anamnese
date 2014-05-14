@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :pacientes
+
   root 'home#index'
   get '/index' => 'home#index'
   get '/about' => 'home#about', as: :about

@@ -1,0 +1,25 @@
+<%= simple_form_for(@paciente) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :nome %>
+    <%= f.input :email %>
+    <%= f.input :telefone %>
+    <%= f.input :data_nascimento %>
+    <%= f.input :sexo %>
+    <%= f.input :estado_civil %>
+    <%= f.input :profissao %>
+    <%= f.input :trabalha %>
+    <%= f.input :tipo_sanguineo %>
+    <%= f.input :fumante %>
+    <%= f.input :etilista %>
+    <%= f.input :cirurgias %>
+    <%= f.input :doencas_paternas %>
+    <%= f.input :doencas_maternas %>
+    <%= f.input :historico_peso %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
