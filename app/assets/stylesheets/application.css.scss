@@ -1,5 +1,15 @@
 $brand-green: #3dbb3c;
 $brand-pink: #dd1456;
+$brand-white: #fff;
+
+$brand-name-color: $brand-white;
+
+$input-border-focus: $brand-green;
+
+$btn-success-bg: $brand-green;
+
+$panel-primary-text: $brand-pink;
+$panel-primary-heading-bg: $brand-white;
 
 $navbar-height: 80px;
 
@@ -7,6 +17,9 @@ $navbar-default-bg: $brand-pink;
 $navbar-default-link-hover-bg: lighten($brand-green, 5%);
 $navbar-default-link-color: #fff;
 $navbar-default-link-hover-color: #fff;
+
+$jumbotron-bg: #fafafa;
+$jumbotron-padding: 18px;
 
 @import "bootstrap";
 
@@ -18,9 +31,20 @@ $navbar-default-link-hover-color: #fff;
   background-color: $brand-green;
   letter-spacing: 1.5px;
 }
-.jumbotron {
-  background-color: #fafafa;
-}
-.jumbotron h1 {
+.jumbotron h1, h2 {
   color: $brand-pink;
+}
+.brand-name {
+  padding-top: $navbar-padding-vertical;
+  font-size: $font-size-h1;
+  color: $brand-name-color;
+  vertical-align: middle;
+  letter-spacing: 8px;
+}
+.brand-name:hover,  .brand-name:focus{
+  color: $brand-name-color;
+  text-decoration: none;
+}
+.panel-heading {
+  font-size: $font-size-large;
 }

@@ -1,25 +1,19 @@
-<%= simple_form_for(@paciente) do |f| %>
-  <%= f.error_notification %>
+<%= simple_form_for @paciente, html: { class: "form-inline" }, 
+    wrapper_mappings: {
+        check_boxes: :horizontal_radio_and_checkboxes,
+        radio_buttons: :horizontal_radio_and_checkboxes,
+        file: :horizontal_file_input,
+        boolean: :horizontal_boolean
+    } do |f| %>
+    <%= f.error_notification %>
+    <div class="row">
+      <%= render partial: 'dados_pessoais', layout: 'field_wrapper', locals: { title: 'Dados Pessoais', f: f } %>
 
-  <div class="form-inputs">
-    <%= f.input :nome %>
-    <%= f.input :email %>
-    <%= f.input :telefone %>
-    <%= f.input :data_nascimento %>
-    <%= f.input :sexo %>
-    <%= f.input :estado_civil %>
-    <%= f.input :profissao %>
-    <%= f.input :trabalha %>
-    <%= f.input :tipo_sanguineo %>
-    <%= f.input :fumante %>
-    <%= f.input :etilista %>
-    <%= f.input :cirurgias %>
-    <%= f.input :doencas_paternas %>
-    <%= f.input :doencas_maternas %>
-    <%= f.input :historico_peso %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+      <%= render partial: 'dados_historicos', layout: 'field_wrapper', locals: { title: 'Dados Históricos', f: f } %>
+    </div>
+    <div class="row">
+      <div class="form-actions">
+        <%= f.button :submit, "Salvar Paciente", class: "btn btn-success btn-lg" %>
+      </div>
+    </div>
 <% end %>

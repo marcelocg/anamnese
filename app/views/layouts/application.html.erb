@@ -15,12 +15,14 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
+        <!-- <span class="brand-name">Anamnese</span> -->
+        <%= link_to 'Anamnese', root_path, class: 'brand-name' %>
         <%= link_to image_tag('logo_isabela_completa_80.png'), root_path, class: 'navbar-brand' %>
       </div>
       <div class="navbar-collapse collapse navbar-responsive-collapse">
-        <ul class="nav navbar-nav">
-          <li><%= link_to 'Home',  root_path,  class: ('active' if params[:controller] == 'home' && params[:action] == 'index') %></li>
-          <li><%= link_to 'About', about_path, class: ('active' if params[:controller] == 'home' && params[:action] == 'about') %></li>
+        <ul class="nav navbar-nav pull-right">
+          <li><%= link_to 'Pacientes',  root_path,  class: ('active' if params[:controller] == 'pacientes') %></li>
+          <li><%= link_to 'About', about_path, class: ('active' if params[:controller] == 'home') %></li>
         </ul>
       </div>
     </nav>
@@ -32,7 +34,11 @@
     <% end %>
 
     <div class="row">
-      <%= yield %>
+      <div class="col-md-12">
+        <!-- <div class="jumbotron"> -->
+          <%= yield %>
+        <!-- </div> -->
+      </div>
     </div>
   </div>
 
