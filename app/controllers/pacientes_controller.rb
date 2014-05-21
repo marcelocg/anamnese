@@ -24,7 +24,7 @@ class PacientesController < ApplicationController
     @paciente = Paciente.new(paciente_params)
 
     if @paciente.save
-      redirect_to @paciente, notice: 'Paciente was successfully created.'
+      redirect_to pacientes_url, notice: 'Paciente was successfully created.'
     else
       render :new
     end
@@ -33,7 +33,7 @@ class PacientesController < ApplicationController
   # PATCH/PUT /pacientes/1
   def update
     if @paciente.update(paciente_params)
-      redirect_to @paciente, notice: 'Paciente was successfully updated.'
+      redirect_to pacientes_url, notice: 'Paciente was successfully updated.'
     else
       render :edit
     end
@@ -53,6 +53,6 @@ class PacientesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def paciente_params
-      params.require(:paciente).permit(:nome, :email, :telefone, :data_nascimento, :sexo, :estado_civil, :profissao, :trabalha, :tipo_sanguineo, :fumante, :etilista, :cirurgias, :doencas_paternas, :doencas_maternas, :historico_peso)
+      params.require(:paciente).permit(:nome, :email, :telefone, :data_nascimento, :sexo, :estado_civil, :profissao, :trabalha, :sangue, :fumante, :etilista, :cirurgias, :doencas_paternas, :doencas_maternas, :historico_peso)
     end
 end
