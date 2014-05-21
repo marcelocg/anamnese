@@ -1,79 +1,84 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Nome:</strong>
-  <%= @paciente.nome %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @paciente.email %>
-</p>
-
-<p>
-  <strong>Telefone:</strong>
-  <%= @paciente.telefone %>
-</p>
-
-<p>
-  <strong>Data nascimento:</strong>
-  <%= @paciente.data_nascimento %>
-</p>
-
-<p>
-  <strong>Sexo:</strong>
-  <%= @paciente.sexo %>
-</p>
-
-<p>
-  <strong>Estado civil:</strong>
-  <%= @paciente.estado_civil %>
-</p>
-
-<p>
-  <strong>Profissao:</strong>
-  <%= @paciente.profissao %>
-</p>
-
-<p>
-  <strong>Trabalha:</strong>
-  <%= @paciente.trabalha %>
-</p>
-
-<p>
-  <strong>Tipo sanguineo:</strong>
-  <%= @paciente.sangue %>
-</p>
-
-<p>
-  <strong>Fumante:</strong>
-  <%= @paciente.fumante %>
-</p>
-
-<p>
-  <strong>Etilista:</strong>
-  <%= @paciente.etilista %>
-</p>
-
-<p>
-  <strong>Cirurgias:</strong>
-  <%= @paciente.cirurgias %>
-</p>
-
-<p>
-  <strong>Doencas paternas:</strong>
-  <%= @paciente.doencas_paternas %>
-</p>
-
-<p>
-  <strong>Doencas maternas:</strong>
-  <%= @paciente.doencas_maternas %>
-</p>
-
-<p>
-  <strong>Historico peso:</strong>
-  <%= @paciente.historico_peso %>
-</p>
+<div class="row">
+  <div class="panel panel-primary">
+    <div class="panel-heading">Dados Pessoais</div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-xs-3">
+          <strong>Nome:</strong> <%= @paciente.nome %>
+        </div>
+        <div class="col-xs-3">
+          <strong>Email:</strong>
+          <%= @paciente.email %>
+        </div>
+        <div class="col-xs-3">
+          <strong>Telefone:</strong>
+          <%= @paciente.telefone %>
+        </div>
+        <div class="col-xs-3">
+          <strong>Data nascimento:</strong>
+          <%= @paciente.data_nascimento %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3">
+          <strong>Sexo:</strong>
+          <%= @paciente.sexo == "M" ? "Masculino":"Feminino" %>
+        </div>
+        <div class="col-xs-3">
+          <strong>Estado civil:</strong>
+          <%= @paciente.estado_civil %>
+        </div>
+        <div class="col-xs-3">
+          <strong>Profissao:</strong>
+          <%= @paciente.profissao %>
+        </div>
+        <div class="col-xs-3">
+          <strong>Trabalha:</strong>
+          <%= @paciente.trabalha ? "Sim":"Não" %>
+        </div>
+      </div>  
+      <div class="row">
+        <div class="col-xs-3">
+          <strong>Tipo sanguineo:</strong>
+          <%= @paciente.sangue %>
+        </div>
+        <div class="col-xs-3">
+          <strong>Fumante:</strong>
+          <%= @paciente.fumante ? "Sim":"Não" %>
+        </div>
+        <div class="col-xs-3">
+          <strong>Etilista:</strong>
+          <%= @paciente.etilista ? "Sim":"Não" %>
+        </div>
+        <div class="col-xs-3">
+        </div>
+      </div>  
+    </div>
+  </div>
+  <div class="panel panel-primary">
+    <div class="panel-heading">Dados Pessoais</div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-xs-3">
+          <strong>Cirurgias:</strong><br/>
+          <%= @paciente.cirurgias %>
+        </div>
+        <div class="col-xs-3">
+          <strong>Doencas paternas:</strong><br/>
+          <%= @paciente.doencas_paternas %>
+        </div>
+        <div class="col-xs-3">
+          <strong>Doencas maternas:</strong><br/>
+          <%= @paciente.doencas_maternas %>
+        </div>
+        <div class="col-xs-3">
+          <strong>Historico peso:</strong><br/>
+          <%= @paciente.historico_peso %>
+        </div>
+      </div>  
+    </div>
+  </div>
+</div>
 
 <%= link_to 'Edit', edit_paciente_path(@paciente) %> |
 <%= link_to 'Back', pacientes_path %>
