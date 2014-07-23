@@ -6,7 +6,8 @@
       <th>Nome</th>
       <th>Email</th>
       <th>Telefone</th>
-      <th colspan="3"></th>
+      <!-- <th colspan="5"></th> -->
+      <th class="text-center">Ações</th>
     </tr>
   </thead>
 
@@ -16,9 +17,13 @@
         <td><%= paciente.nome %></td>
         <td><%= paciente.email %></td>
         <td><%= paciente.telefone %></td>
-        <td><%= link_to 'Show', paciente %></td>
-        <td><%= link_to 'Edit', edit_paciente_path(paciente) %></td>
-        <td><%= link_to 'Destroy', paciente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="text-center">
+          <%= link_to sanitize("<span class='glyphicon glyphicon-info-sign'></span>"), paciente, id: "bt-show", class: "btn btn-primary btn-sm", title:"Detalhes do Paciente" %>
+          <%= link_to sanitize("<span class='glyphicon glyphicon-pencil'></span>"), edit_paciente_path(paciente), id: "bt-edit", class: "btn btn-primary btn-sm", title:"Editar dados do Paciente" %>
+          <%= link_to sanitize("<span class='glyphicon glyphicon-list-alt'></span>"), edit_paciente_path(paciente), id: "bt-anamnese", class: "btn btn-primary btn-sm", title:"Criar Nova Anamnese para este Paciente" %>
+          <%= link_to sanitize("<span class='glyphicon glyphicon-time'></span>"), edit_paciente_path(paciente), id: "bt-historico", class: "btn btn-primary btn-sm", title:"Histórico de Anamneses do Paciente" %>
+          <%= link_to sanitize("<span class='glyphicon glyphicon-trash'></span>"),  paciente, method: :delete, data: { confirm: 'Você está prestes a excluir este paciente de forma definitiva. Tem certeza de que deseja tomar essa ação?' }, id: "bt-destroy", class: "btn btn-primary btn-sm", title:"Excluir Paciente. CUIDADO!" %>
+        </td>
       </tr>
     <% end %>
   </tbody>
