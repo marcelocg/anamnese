@@ -1,9 +1,10 @@
+ruby '2.2.2'
 source 'https://rubygems.org'
-gem 'rails', '4.1.1'
+gem 'rails'
 gem 'pg'
-gem 'sass-rails', '~> 4.0.3'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.0.0'
+gem 'sass-rails'
+gem 'uglifier'
+gem 'coffee-rails'
 gem 'therubyracer',  platforms: :ruby
 gem 'jquery-rails'
 # Spring speeds up development by keeping your application running in the background. 
@@ -11,11 +12,13 @@ gem 'jquery-rails'
 # gem 'spring',        group: :development
 
 gem 'devise'
-gem 'simple_form', '~> 3.1.0.rc1', github: 'plataformatec/simple_form'
-gem 'bootstrap-sass', '~> 3.1.1'
+gem 'simple_form'
+gem 'bootstrap-sass'
 
 # Help simple_form to handle activerecord enum field
 gem 'enum_help'
+
+gem 'puma'
 
 group :development, :test do
   gem 'guard'
